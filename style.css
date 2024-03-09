@@ -280,9 +280,9 @@ nav input[type="radio"]:hover
 	box-shadow:var(--body-shadow); 
 	opacity:0.95;	
 	display:grid;
-	/*grid-template-rows:repeat(6,8dvh);*/
+	grid-template-rows:repeat(6,8dvh);
 	grid-template-columns:repeat(4,8dvh);
-	grid-auto-rows:10%;
+	/*grid-auto-rows:10%;*/
 	width:fit-content;
 	padding:10px;
 	
@@ -293,7 +293,7 @@ nav input[type="radio"]:hover
 {
 	font-size: 1.1rem;
 	grid-area:3/1/7/5;
-	overflow:hidden;
+	
 }
 .profile-caption h2 a
 {
