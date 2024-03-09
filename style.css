@@ -297,7 +297,7 @@ nav input[type="radio"]:hover
 }
 .member-card .profile-caption
 {
-	font-size: min(1.2rem,2dvh);
+	font-size: 1.2rem;
 }
 .profile-caption h2 a
 {
@@ -306,7 +306,7 @@ nav input[type="radio"]:hover
 }
 .member-card .profile-img  
 {
-	width:max(5.5rem,5.5vw);
+	flex: 1 1 20%;
 	aspect-ratio:1/1;
 	margin:auto;	
 	border-radius:60%;
