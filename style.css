@@ -260,6 +260,7 @@ nav input[type="radio"]:hover
 {
 	position:relative;
 	display:flex;
+	height:40dvh;
 	justify-items:space-evenly;
 	border-color:gold;
 	border-radius:5px;
