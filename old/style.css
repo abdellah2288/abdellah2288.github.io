@@ -1,0 +1,333 @@
+:root
+{
+	--background-color : #03070a; 
+	--text-card-background-color : var(--background-color);
+	--text-card-accent-color : gold;
+	--text-card-text-color : whitesmoke;
+	--text-card-header-color : gold;
+	--text-card-right-border-size : 4px;
+	
+	--news-card-shadow-color:gold;
+	--news-card-background-color:gold;
+	--news-card-text-color:whitesmoke;
+
+	--global-text-color : whitesmoke;
+	--global-font : "kode mono";
+}
+html
+{
+	background-color: var(--background-color);
+	font-family: var(--global-font);
+	margin : 0px;
+}
+.news-card
+{
+	display:grid;
+	grid-template-rows:5vw;
+	grid-template-columns:5vw;
+	aspect-ratio:16/10;
+	background:var(--news-card-background-color);
+	overflow:hidden;
+	color:var(--news-card-text-color);
+	font-size:1vw;
+	object-fit:cover;
+}
+.news-card .img-container
+{
+	position:relative;
+	grid-row:1/10;
+	grid-column:1/16;
+	
+}
+.news-card .img-container img 
+{
+	position:absolute;
+	top:0;
+	padding:0;
+	margin:0;
+	height:100%;
+	width:100%;
+}
+.image-banner img
+{ 
+	position: absolute;
+	left: 45%;
+	top:15%;
+	width: auto; 
+	height: 20dvh;
+	margin:auto;
+}
+
+.image-banner .text-overlay { 
+	position: relative; 
+	z-index: 1;
+	top:60%;
+	color: var(--background-color);
+        background-color : whitesmoke;	
+	font-size: 2.2vw; 
+	font-weight : 400;
+	opacity: 1; 
+	border-width : 0px 0px 0px 2px;
+	}
+.stacking-bar
+{
+	margin: 0.5rem;
+	top : 0px;
+}
+.text-card
+{
+	font-size: 1.2vw;
+	width:fit-content;
+	position: relative;
+  	padding : 0.2rem 1rem 1rem 1rem;
+	
+	background-color : var(--text-card-background-color);
+	color : var(--text-card-text-color);
+
+  	border-style : solid;
+	border-radius : 10px;
+  	border-width :0px var(--text-card-right-border-size) 0px 4px;
+  	border-color : var(--text-card-accent-color);
+}
+.text-card h2
+{
+	color : var(--text-card-header-color);
+}
+.text-card a
+{
+	color : gold;
+}
+.text-card-centered
+{
+	font-size: 1.2vw;
+	width:fit-content;
+	text-align: center;
+	position: relative;
+  	padding : 0.2rem 1rem 1rem 1rem;
+	margin: auto;
+	
+	background-color : var(--text-card-background-color);
+	color : var(--text-card-text-color);
+
+  	border-style : solid;
+	border-radius : 10px;
+  	border-width :0px var(--text-card-right-border-size) 0px 4px;
+  	border-color : var(--text-card-accent-color);
+}
+.text-card-centered h2
+{
+	font-size:2vw;
+	text-align: center;
+	color : var(--text-card-header-color);
+}
+.text-card-centered a
+{
+	color : gold;
+}
+.text-card-centered dt
+{
+	color : goldenrod;
+	font-weight : bold;
+}
+.text-card-centered dt
+{
+	color : goldenrod;
+	font-weight : bold;
+}
+.section-header
+{
+	font-size:2vw;
+	text-align : center;
+	font-weight : bold;
+       	border-color : gold;
+	color : gold;
+	border-style : solid;
+	padding-left : 1vw;
+	border-width : 0 0 0 2px;	
+}
+nav {
+	position : relative;
+	z-index : 1;
+	background-color : rgb( 0 0 0 / 0);
+	display : flex;
+	justify-items : space-around;
+	align-items : center;
+	margin-bottom : 10px;
+}
+nav ul {
+  padding: 0;
+  list-style-type: none;
+  flex: 2;
+  display: flex;
+}
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1.3vw;
+  padding : 0.5rem 0.5rem 0.5rem 0.5rem;
+  text-decoration: none;
+  color : var(--global-text-color);
+  border-style : solid;
+  border-width :0px 0px 2px 0px;
+  border-color : var(--global-text-color);
+  transition : font-size 0.5s;
+}
+nav a:hover
+{
+  	  font-size: 1.5vw;  
+	  color : gold;
+	  border-color: gold;
+}
+nav input[type="radio"]
+{
+  	padding: 0;
+	margin: 0px;
+	appearance : none;
+	width : 0.8vw;
+	height : 0.8vw;
+	outline : 3px solid;
+	outline-color : var(--radio-color);
+	border-radius : 50%;
+	outline-offset : 3px;
+}
+nav form
+{
+
+  	padding: 0px;
+	margin: 0px;
+	display : flex;
+	position : relative;
+	top:40%;
+	gap : 3rem;
+	width : fit-content;
+
+}
+nav input[type="radio"]:checked
+{
+	background-color : var(--radio-color);
+}
+nav input[type="radio"]:checked=false
+{
+	--radio-color : gold; 
+}
+nav input[type="radio"]#dark
+{
+	--radio-color : gold; 
+}
+nav input[type="radio"]#light
+{
+	--radio-color : whitesmoke; 
+}
+:root:has(#dark:checked)
+{
+	--background-color : #03070a; 
+	--text-card-background-color : #03070a;
+	--text-card-accent-color : gold;
+	--text-card-right-border-size : 4px;
+	--global-text-color : whitesmoke;
+
+}
+:root:has(#light:checked)
+{
+	--background-color : slateblue; 
+	--text-card-background-color : slateblue;
+	--text-card-text-color : whitesmoke;
+	--text-card-header-color : gold;
+	--dark-banner-opacity : 0;
+	--light-banner-opacity: 1;
+	--global-text-color : #03070a;
+	--text-card-accent-color : gold;
+	--text-card-right-border-size : 4px;
+	--global-text-color : whitesmoke;
+
+}
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.kode-mono {
+  font-family: "Kode Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
