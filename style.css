@@ -25,7 +25,7 @@ html
 nav
 {
 	position:fixed;
-	font-size:max(1rem,2vw);
+	font-size:min(1.8rem,3vw);
 	z-index:9;
 	top:0px;
 	left:0px;
@@ -55,7 +55,7 @@ nav a
 }
 nav a:hover
 {
-          font-size: 1.5rem;  
+          font-size: 2rem;  
           color : gold;
           border-color: gold;
 }
@@ -112,7 +112,7 @@ nav input[type="radio"]:hover
 /* Section headers */
 .section-header h2
 {
-	font-size:max(1.5rem,3vw);
+	font-size:max(1.3rem,2.5vw);
 	position:relative;
 	border-style:solid;
 	border-radius:10px;
@@ -265,7 +265,7 @@ nav input[type="radio"]:hover
 	border-color:gold;
 	border-radius:5px;
 	border-width:0px 4px 0px 4px;
-	padding:1vw;
+	padding:2vw;
 	margin:auto;
 	gap:2vw;
 	overflow-x:auto;
@@ -295,7 +295,7 @@ nav input[type="radio"]:hover
 }
 .member-card .profile-caption
 {
-	font-size: 1.1rem;
+	font-size: min(1.2rem,2dvh);
 }
 .profile-caption h2 a
 {
@@ -304,7 +304,7 @@ nav input[type="radio"]:hover
 }
 .member-card .profile-img  
 {
-	width:max(5rem,5vw);
+	width:max(5.5rem,5.5vw);
 	aspect-ratio:1/1;
 	margin:auto;	
 	border-radius:60%;
