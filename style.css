@@ -260,21 +260,21 @@ nav input[type="radio"]:hover
 {
 	position:relative;
 	display:flex;
-	height:40dvh;
+	flex:1;
 	justify-items:space-evenly;
 	border-color:gold;
 	border-radius:5px;
 	border-width:0px 4px 0px 4px;
-	padding:2vw;
+	padding-bottom:10vh;
 	margin:auto;
-	gap:2vw;
+	gap:1vw;
 	overflow-x:auto;
 	scroll-snap-type:inline mandatory;
 }
 .member-card
 {	
 	scroll-snap-align:start;
-	flex: 1 0 20%;
+	flex: 1 1 20%;
 	height:40dvh;
 	position:relative;
 	border-color:gold;
