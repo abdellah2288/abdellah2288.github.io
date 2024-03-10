@@ -435,44 +435,45 @@ nav input[type="radio"]:hover
 }
 @media (hover)
 {
-.news-slider .img-container .img-caption
-{
-	font-size:1.8rem;
-	padding:6px;
-	position:relative;
-	z-index:5;
-	bottom:50%;
-	text-align:center;
-	background-color:gold;
-	color:var(--body-background-color);
-	opacity:var(--caption-opacity);	
-	transition:opacity 1s;
-}
+	.news-slider .img-container .img-caption
+	{
+		font-size:1.8rem;
+		padding:6px;
+		position:relative;
+		z-index:5;
+		bottom:50%;
+		text-align:center;
+		background-color:gold;
+		color:var(--body-background-color);
+		opacity:var(--caption-opacity);	
+		transition:opacity 1s;
+	}
 
-.news-slider .img-container img
-{
-	scroll-align:start;
-	height:100%;
-	width:100%;
-	object-fit: cover;
-	filter:blur(var(--news-image-blur));
-	transition: filter 1s;
-}
+	.news-slider .img-container img
+	{
+		scroll-align:start;
+		height:100%;
+		width:100%;
+		object-fit: cover;
+		filter:blur(var(--news-image-blur));
+		transition: filter 1s;
+	}
 
-:root:has(.img-container:hover)
-{
-	--caption-opacity:1;
-	--news-image-blur:5px;
-}
-::-webkit-scrollbar
-{
-	width:0.2vw;
-}
-::-webkit-scrollbar-track
-{
-	background-color:var(--body-background-color);
-}
-::-webkit-scrollbar-thumb
-{
-	background-color:gold;
+	:root:has(.img-container:hover)
+	{
+		--caption-opacity:1;
+		--news-image-blur:5px;
+	}
+	::-webkit-scrollbar
+	{
+		width:0.2vw;
+	}
+	::-webkit-scrollbar-track
+	{
+		background-color:var(--body-background-color);
+	}
+	::-webkit-scrollbar-thumb
+	{
+		background-color:gold;
+	}
 }
