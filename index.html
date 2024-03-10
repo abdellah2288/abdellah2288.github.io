@@ -18,13 +18,12 @@
 				<a href=#events>Events</a>
 				<a href=#projects>Projects</a>
 				<a href=#projects>Contact us</a>
-				<form>
-					<input type="radio" name="theme" id="dark" checked></input>
-					<input type="radio" name="theme" id="light"></input>
-				</form>
+				<div class="theme-switcher-container"> 
+					<input type="checkbox" name="theme" id="theme-switcher"></input>
+					<label for="theme-switcher" id="theme-switcher-label"></label>
+				</div>
 		</nav>
 		<div class="section" id="welcome">
-			<div class="spacer"></div>
 			
 			<div class="banner-video-container">
 				<video src="static/test.mp4" type="video/mp4" autoplay loop muted >
@@ -39,7 +38,6 @@
 		</div>
 		</div>
 		<div class="section" id="whoarewe">
-			<div class="spacer"></div>
 			<div class="section-header"><h2> Who are we? </h2></div>
 			<br/>
 			<br/>
@@ -125,7 +123,6 @@
 			
 		</div>
 		<div class="section" id="news">
-			<div class="spacer"></div>
 			<div class="section-header"><h2> Latest News </h2></div>
 			<br/>
 			<div class="news-container">

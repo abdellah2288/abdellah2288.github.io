@@ -11,6 +11,7 @@
 }
 :root
 {
+	--selected-theme:"Dark";
 	--news-image-blur:0px;
 	--caption-opacity:0;
 	--body-background-color:#212121;
@@ -69,42 +70,41 @@ nav a:hover
           color : gold;
           border-color: gold;
 }
-nav input[type="radio"]
+nav input[type="checkbox"]
 {
 	appearance:none;
 	padding:0;
 	margin:0;
-	height:0.8vw;
+	height:0;
 	aspect-ratio:1/1;
 	border-radius:50%;
 	outline-width:2px;
-	outline-color:var(--radio-color);
-	outline-style:solid;
 	outline-offset:2px;	
-	transition: height 0.5s;
+	transition: height 0.2s;
 }
-nav form
+nav label::before
 {
-	display:flex;
-	gap:1rem;
+	content:var(--selected-theme);
+	color:var(--body-background-color);
+	position:relative;
+	display:inline-block;
+	transition:content 1s;
+}
+nav .theme-switcher-container
+{
+	background-color:whitesmoke;
+	border-bottom-left-radius:20px;
+	border-bottom-right-radius:20px;
 	width:fit-content;
-	justify-content:space-evenly;
+	display:flex;
+	align-items:center;
+	padding:0.3rem;
+	transition:font-size 0.2s;
 }
-nav input[type="radio"]:checked
+nav .theme-switcher-container:hover
 {
-	background-color:var(--radio-color);
-}
-nav input[type="radio"]#dark
-{
-	--radio-color:gold;
-}
-nav input[type="radio"]#light
-{
-	--radio-color:whitesmoke;
-}
-nav input[type="radio"]:hover
-{
-	height: 0.95vw;	
+        font-size: 2rem;  
+	background-color:gold;
 }
 /* Sections */
 .section
@@ -113,17 +113,12 @@ nav input[type="radio"]:hover
 	height:100vh;
 	overflow:hidden;
 }
-/* Spacer */
-.spacer
-{
-	position:relative;
-	height:3rem;
-}
 /* Section headers */
-.section-header::before
+.section::before
 {
-	content:'';
-	height:10rem;
+	content:"";
+	height:6rem;
+	display:block;
 }
 .section-header h2
 {
@@ -422,15 +417,10 @@ nav input[type="radio"]:hover
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 /* root actions */
-:root:has(input[type="radio"]#dark:checked)
+:root:has(input[type="checkbox"]#theme-switcher:checked)
 {
-	--body-background-color:#212121;
-	--body-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
-:root:has(input[type="radio"]#light:checked)
-{
+	--selected-theme:"Light";
 	--body-background-color:slateblue;
-	--body-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 @media (hover)
 {
@@ -476,4 +466,8 @@ nav input[type="radio"]:hover
 ::-webkit-scrollbar-thumb
 {
 	background-color:gold;
+}
+@media()
+{
+
 }
