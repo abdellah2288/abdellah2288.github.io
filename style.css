@@ -301,8 +301,7 @@ nav input[type="radio"]:hover
 }
 .member-card
 {	
-	flex: 1 1 30%;
-	min-width:30%;
+	flex: 1 0 30%;
 	position:relative;
 	height:40dvh;
 	border-color:gold;
