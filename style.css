@@ -286,7 +286,6 @@ nav input[type="radio"]:hover
 	margin:auto;
 	gap:4vw;
 	overflow-x:auto;
-	scroll-snap-type:inline proximity;
 }
 .member-card-holder::-webkit-scrollbar
 {
@@ -302,7 +301,6 @@ nav input[type="radio"]:hover
 }
 .member-card
 {	
-	scroll-snap-align:start;
 	flex: 1 1 30%;
 	min-width:30%;
 	position:relative;
