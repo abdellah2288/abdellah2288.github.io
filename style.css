@@ -3,6 +3,12 @@
   font-weight: 400;
   font-style: normal;
 }
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 :root
 {
 	--news-image-blur:0px;
@@ -18,10 +24,11 @@ html
 	background-color:var(--body-background-color);
 	color:var(--body-text-color);
 	font-family:"kode mono";
+	overflow-x:hidden;
 	scroll-snap-type:y mandatory;
 	scroll-padding-top:0px;
 	scroll-behavior:smooth;
-	scroll-padding-top:5vh;
+	scroll-padding-top:0vh;
 	transition: background-color 1s;
 }
 /* Navbar */
@@ -102,20 +109,25 @@ nav input[type="radio"]:hover
 /* Sections */
 .section
 {
-	height:110vh;
 	scroll-snap-align:start;
+	height:100vh;
 	overflow:hidden;
 }
 /* Spacer */
 .spacer
 {
 	position:relative;
-	height:0vh;
+	height:3rem;
 }
 /* Section headers */
+.section-header::before
+{
+	content:'';
+	height:10rem;
+}
 .section-header h2
 {
-	font-size:max(1.3rem,2.5vw);
+	font-size:2.4rem;
 	position:relative;
 	border-style:solid;
 	border-radius:10px;
@@ -233,7 +245,7 @@ nav input[type="radio"]:hover
 /* Text cards */
 .text-card
 {
-	font-size:max(1rem,1.3vw);
+	font-size:1.6rem;
 	position:relative;
 	margin:auto;
 	padding:10px;
@@ -262,31 +274,44 @@ nav input[type="radio"]:hover
 .member-card-holder
 {
 	position:relative;
-	height:100%;
+	height:auto;
 	display:flex;
-	flex:0 0 100%;
-	justify-items:space-between;
+	justify-items:flex-start;
 	border-color:gold;
 	border-radius:5px;
 	border-width:0px 4px 0px 4px;
-	padding-bottom:10vh;
+	padding-bottom:5vh;
+	padding-left:5vw;
+	padding-right:5vw;
 	margin:auto;
 	gap:4vw;
 	overflow-x:auto;
 	scroll-snap-type:inline proximity;
-	scrollbar-width:none;
+}
+.member-card-holder::-webkit-scrollbar
+{
+	height:0.4dvh;
+}
+.member-card-holder::-webkit-scrollbar-track
+{
+	background-color:var(--body-background-color);
+}
+.member-card-holder::-webkit-scrollbar-thumb
+{
+	background-color:gold;
 }
 .member-card
 {	
 	scroll-snap-align:start;
-	flex: 0 1 auto;
+	flex: 1 1 30%;
+	min-width:30%;
 	position:relative;
 	height:40dvh;
 	border-color:gold;
 	border-radius:5px;
 	border-width:0px 0px 0px 0px;
 	border-style:solid;
-	padding:1vw;
+	padding:0;
 	box-shadow:var(--body-shadow); 
 	opacity:0.95;	
 	display:flex;
@@ -295,32 +320,22 @@ nav input[type="radio"]:hover
 	align-items:center;
 	background-color:gold;
 	color:var(--body-background-color);
+	overflow:hidden;
 }
 .member-card .profile-caption
 {
-	font-size: 1rem;
+	font-size: max(1vw,1.3rem);
 }
 .profile-caption h2 a
 {
-	flex: 0 1 60%;
+	flex: 0 1 30%;
 	text-decoration:none;
 	text-align:center;
 }
 .member-card .profile-img  
 {
-	flex: 0 1 auto;
-	aspect-ratio:1/1;
-	margin:auto;	
-	border-radius:60%;
-	border-style:solid;
-	border-width:2px;
-	border-color:var(--body-background-color);
-	
-	outline-style:solid;
-	outline-color:var(--body-background-color);
-	outline-width:2px;
-	outline-offset:2px;
-	
+	flex: 1 1 50%;
+	max-height:50%;
 	overflow:hidden;
 }
 .profile-img img
@@ -451,4 +466,15 @@ nav input[type="radio"]:hover
 	--caption-opacity:1;
 	--news-image-blur:5px;
 }
+::-webkit-scrollbar
+{
+	width:0.2vw;
+}
+::-webkit-scrollbar-track
+{
+	background-color:var(--body-background-color);
+}
+::-webkit-scrollbar-thumb
+{
+	background-color:gold;
 }
