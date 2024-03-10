@@ -375,6 +375,7 @@ nav input[type="radio"]:hover
 }
 .news-container .news-slider .img-container
 {
+	scroll-align:start;
 	flex:1 0 100%;
 }
 .img-container a 
@@ -397,7 +398,6 @@ nav input[type="radio"]:hover
 
 .news-slider .img-container img
 {
-	scroll-align:start;
 	height:100%;
 	width:100%;
 	object-fit: cover;
@@ -464,16 +464,17 @@ nav input[type="radio"]:hover
 		--caption-opacity:1;
 		--news-image-blur:5px;
 	}
-	::-webkit-scrollbar
-	{
-		width:0.2vw;
-	}
-	::-webkit-scrollbar-track
-	{
-		background-color:var(--body-background-color);
-	}
-	::-webkit-scrollbar-thumb
-	{
-		background-color:gold;
-	}
+}	
+
+::-webkit-scrollbar
+{
+	width:0.2vw;
+}
+::-webkit-scrollbar-track
+{
+	background-color:var(--body-background-color);
+}
+::-webkit-scrollbar-thumb
+{
+	background-color:gold;
 }
