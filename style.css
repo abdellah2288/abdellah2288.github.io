@@ -326,8 +326,8 @@ nav .theme-switcher-container:hover
 }
 .member-card .profile-img  
 {
-	flex: 1 1 50%;
-	max-height:50%;
+	flex: 0 1 50%;
+	width:100%;
 	overflow:hidden;
 }
 .profile-img img
