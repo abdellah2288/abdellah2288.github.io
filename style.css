@@ -475,6 +475,7 @@ nav .theme-switcher-container:hover
 .social-media-box .social-media-item
 {
 	flex: 0 1 15%;
+	box-shadow:var(--body-shadow); 
 	border-radius:20px;
 	overflow:hidden;
 } 
