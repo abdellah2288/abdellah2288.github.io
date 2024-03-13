@@ -342,7 +342,7 @@ nav .theme-switcher-container:hover
 	width:100%;
 	object-fit:cover;
 }
-/* News slider */
+/* Content slider */
 .slide-container
 {
 	position:relative;
@@ -415,12 +415,12 @@ nav .theme-switcher-container:hover
 }
 .slide-container .selection-box a
 {
-	border-width:0.5dvh;
+	border-width:0.2dvh;
 	border-style:solid;
-	width:0.5vw;
+	width:0.6vw;
 	aspect-ratio:1/1;
 	border-radius:50%;
-	border-color:whitesmoke;
+	border-color:var(--body-background-color);
 	background-color:whitesmoke;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
@@ -465,6 +465,26 @@ nav .theme-switcher-container:hover
 	border-color:gold;
 	color:whitesmoke;
 }
+/* Social media box*/
+.social-media-box
+{
+	display:flex;
+	justify-content:space-evenly;
+	gap:2vw;
+}
+.social-media-box .social-media-item
+{
+	flex: 0 1 15%;
+	border-radius:20px;
+	overflow:hidden;
+} 
+.social-media-item img
+{
+	height:100%;
+	width:100%;
+	object-fit:cover;
+}
+
 /* root actions */
 :root:has(input[type="checkbox"]#theme-switcher:checked)
 {
