@@ -498,7 +498,7 @@ nav .theme-switcher-container:hover
 }
 .social-media-box .social-media-item
 {
-	flex: 0 1 15%;
+	flex: 0 1 10%;
 	box-shadow:var(--body-shadow); 
 	border-radius:20px;
 	overflow:hidden;
@@ -556,6 +556,13 @@ nav .theme-switcher-container:hover
 	.member-card .profile-caption
 	{
 		font-size: max(1vw,1.8rem);
+	}
+}
+@media (min-height:900)
+{
+	.social-media-box
+	{
+		margin-top:10dvh;
 	}
 }
 
